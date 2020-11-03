@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7716BBBD2550DB6500363F71 /* Example Source File.dasm in Sources */ = {isa = PBXBuildFile; fileRef = 7716BBBC2550DB6500363F71 /* Example Source File.dasm */; };
 		77616FF9254DB92E007C2B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77616FF8254DB92E007C2B49 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7716BBBB2550D8D200363F71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7716BBBC2550DB6500363F71 /* Example Source File.dasm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Example Source File.dasm"; sourceTree = "<group>"; };
+		7716BBBE2550DBFD00363F71 /* Example Translation.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Example Translation.txt"; sourceTree = "<group>"; usesTabs = 1; };
+		7716BBBF2550DDCA00363F71 /* Example Output.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; path = "Example Output.asm"; sourceTree = "<group>"; };
 		77616FF5254DB92E007C2B49 /* TransLit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TransLit; sourceTree = BUILT_PRODUCTS_DIR; };
 		77616FF8254DB92E007C2B49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +46,10 @@
 		77616FEC254DB92E007C2B49 = {
 			isa = PBXGroup;
 			children = (
+				7716BBBB2550D8D200363F71 /* README.md */,
+				7716BBBC2550DB6500363F71 /* Example Source File.dasm */,
+				7716BBBE2550DBFD00363F71 /* Example Translation.txt */,
+				7716BBBF2550DDCA00363F71 /* Example Output.asm */,
 				77616FF7254DB92E007C2B49 /* TransLit */,
 				77616FF6254DB92E007C2B49 /* Products */,
 			);
@@ -119,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77616FF9254DB92E007C2B49 /* main.m in Sources */,
+				7716BBBD2550DB6500363F71 /* Example Source File.dasm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
