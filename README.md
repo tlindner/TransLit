@@ -32,6 +32,6 @@ You can have as many '1' lines as you need.
 
 The replace regex can contain '\\n' for newlines.
 
-The 'label capture number' let's the system know which addresses need to be labels.
+The 'label capture number' let's the system know which addresses need to be turned into a label.
 
 
