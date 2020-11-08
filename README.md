@@ -20,7 +20,7 @@ Then a semi-colon.
 
 Then a comment until the end of the line.
 
-Form 2: XXXX: freeform assemble
+Form 2: XXXX: freeform assembly
 
 The XXXX causes the processor to include the data after the colon space exactly as it is typed.
 
