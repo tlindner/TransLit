@@ -87,7 +87,7 @@ int main(int argc, const char * argv[]) {
             
             a = [trans componentsSeparatedByString:@"\t"];
             if ([trans hasPrefix:@"0"]) {
-                out(@"\t%@\n", a[1]);
+                out(@"%@\n", a[1]);
             }
             else if ([trans hasPrefix:@"1"]) {
                 NSRegularExpression *rex = [NSRegularExpression regularExpressionWithPattern:a[1] options:NSRegularExpressionCaseInsensitive error:&err];

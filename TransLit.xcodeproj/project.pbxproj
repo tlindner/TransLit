@@ -9,17 +9,19 @@
 /* Begin PBXBuildFile section */
 		7716BBBD2550DB6500363F71 /* Example Source File.dasm in Sources */ = {isa = PBXBuildFile; fileRef = 7716BBBC2550DB6500363F71 /* Example Source File.dasm */; };
 		77616FF9254DB92E007C2B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77616FF8254DB92E007C2B49 /* main.m */; };
+		779090BD2570428100124F3F /* TransLit in CopyFiles */ = {isa = PBXBuildFile; fileRef = 77616FF5254DB92E007C2B49 /* TransLit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		77616FF3254DB92E007C2B49 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = /Users/tlindner/bin;
 			dstSubfolderSpec = 0;
 			files = (
+				779090BD2570428100124F3F /* TransLit in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
