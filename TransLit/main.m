@@ -226,9 +226,9 @@ int main(int argc, const char * argv[]) {
                     
                     if (address >= start_address && address <=end_address) {
                         fcb_flag = true;
-                        if (address == start_address ) {
-                            out(@"    org $%@\n", label);
-                        }
+//                        if (address == start_address ) {
+//                            out(@"    org $%@\n", label);
+//                        }
                         
                         if ([labelArray containsObject:label]) {
                             out(@"L%@\n", label );
