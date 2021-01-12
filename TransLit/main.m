@@ -209,6 +209,8 @@ int main(int argc, const char * argv[]) {
         
         /* Output transliterated source */
         int i=0;
+        NSMutableString *fcb_comment = [[NSMutableString alloc] init];
+        int j=0;
         
         for (NSString *srcLine in source) {
             bool fcb_flag = false;
@@ -224,32 +226,45 @@ int main(int argc, const char * argv[]) {
                     unsigned start_address = [fcb_range[0] unsignedIntValue];
                     unsigned end_address = [fcb_range[1] unsignedIntValue];
                     
-                    if (address >= start_address && address <=end_address) {
+                    if (address >= start_address && address <= end_address) {
                         fcb_flag = true;
-//                        if (address == start_address ) {
-//                            out(@"    org $%@\n", label);
-//                        }
                         
                         if ([labelArray containsObject:label]) {
+                            out(@"%*s   %@\n", (9-j)*4, " ", fcb_comment);
+                            j = 0;
+                            [fcb_comment setString:@""];
                             out(@"L%@\n", label );
                         }
-                        output(@"    fcb " );
                         
-                        for (int j=6; j<18; j+=3) {
-                            NSString *byte = [srcLine substringWithRange:NSMakeRange(j, 2)];
-                            
-                            if( [byte isEqualToString:@"  "]) {
-                                break;
-                            }
-                            
-                            if (j>6) {
-                                output( @"," );
-                            }
-                            
-                            out(@"$%@", byte);
+                        if (j>7) {
+                            out(@"%*s   %@\n", (9-j)*4, " ", fcb_comment);
+                            j = 0;
+                            [fcb_comment setString:@""];
                         }
                         
-                        output(@"\n");
+                        if (j==0) {
+                            output(@"    fcb " );
+                        }
+
+                        NSString *byte = [srcLine substringWithRange:NSMakeRange(6, 2)];
+                            
+                        if (j>0) {
+                            output( @"," );
+                        }
+                        
+                        out(@"$%@", byte);
+                        unsigned int c;
+                        [[NSScanner scannerWithString:byte] scanHexInt:&c];
+                        [fcb_comment appendFormat:@"%c", isprint(c) ? c : '.'];
+                        j++;
+
+                        if( address == end_address )
+                        {
+                            out(@"%*s   %@\n", (9-j)*4, " ", fcb_comment);
+                            j = 0;
+                            [fcb_comment setString:@""];
+                        }
+
                         break;
                     }
                 }

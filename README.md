@@ -34,4 +34,7 @@ The replace regex can contain '\\n' for newlines.
 
 The 'label capture number' let's the system know which addresses need to be turned into a label.
 
+Form 3: XXXX<tab>XXXX
+
+This allows you to mark aread of the binary as FCB areas. In the source they must be one byte per line.
 
