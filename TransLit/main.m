@@ -184,7 +184,7 @@ int main(int argc, const char * argv[]) {
                         [trapArray addObject:@[s, @"INT3\n    orcc #$50\n    pshs a,b,cc,x"]];
                     }
                     else if (current_trap == 2) {
-                        [trapArray addObject:@[s, @"INT2\n    orcc #$50\n    pshs a,b,cc,x"]];
+                        [trapArray addObject:@[s, @"INT2\n"]];
                     }
                     else if (current_trap == 1) {
                         [trapArray addObject:@[s, @"INT1\n    orcc #$50\n    pshs a,b,cc,x"]];
