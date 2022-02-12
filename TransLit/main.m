@@ -181,13 +181,13 @@ int main(int argc, const char * argv[]) {
                     s = [NSString stringWithFormat:@"%@%@", [srcLine substringWithRange:NSMakeRange(6, 2)], [srcLine substringWithRange:NSMakeRange(9, 2)]];
 
                     if (current_trap == 3) {
-                        [trapArray addObject:@[s, @"INT3\n    orcc #$50\n    pshs a,b,cc,x"]];
+                        [trapArray addObject:@[s, @"INT3\n"]];
                     }
                     else if (current_trap == 2) {
                         [trapArray addObject:@[s, @"INT2\n"]];
                     }
                     else if (current_trap == 1) {
-                        [trapArray addObject:@[s, @"INT1\n    orcc #$50\n    pshs a,b,cc,x"]];
+                        [trapArray addObject:@[s, @"INT1\n"]];
                     }
                     else if (current_trap == 0) {
                         [trapArray addObject:@[s, @"RESET"]];
